@@ -94,6 +94,73 @@ body .infobox {
   color: var(--bofa-blue);
 }
 
+/* Transaction card styles */
+.box-info-count {
+  font-size: 1.1rem;
+  color: #666;
+  text-align: center;
+  padding: 10px 0;
+  font-weight: 500;
+}
+
+.recent-transaction {
+  padding: 15px 10px;
+  margin: 0px 0;
+}
+
+.transaction-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.transaction-arrow {
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #f8f9fa;
+}
+
+.deposit-arrow {
+  color: #0071ce;
+  background-color: #e7f3ff;
+}
+
+.withdraw-arrow {
+  color: #d9534f;
+  background-color: #ffe7e7;
+}
+
+.transaction-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.transaction-amount {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #000;
+}
+
+.transaction-date {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.no-transactions {
+  text-align: center;
+  padding: 20px 10px;
+  color: #999;
+  font-style: italic;
+}
+
 /* Hero section spacing adjustments */
 .hero {
   min-height: 220px;

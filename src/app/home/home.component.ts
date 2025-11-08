@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 
 import { TransferhistoryService } from '../transfer-history.service';
 import { TransactionService } from '../transaction.service';
+import { Transaction } from '../models/transaction';
 
 @Component({
   selector: 'app-home',
@@ -20,10 +21,8 @@ export class HomeComponent implements OnInit {
   primaryBalanceLocal: number;
   transaction: any = {
     count: 0,
-    deposit: 0,
-    withdrawl: 0,
-    total: 0,
   };
+  mostRecentTransaction: Transaction | null = null;
   transfer = 0;
 
   constructor(
@@ -44,17 +43,9 @@ export class HomeComponent implements OnInit {
     });
 
     this.transactionService.getTransactions(this.accNo).subscribe((res) => {
-      if (res) {
+      if (res && res.length > 0) {
         this.transaction.count = res.length;
-        res.forEach((item) => {
-          if (item.action == 'deposit') {
-            this.transaction.deposit += item.amount;
-          } else {
-            this.transaction.withdrawl += item.amount;
-          }
-        });
-        this.transaction.total =
-          this.transaction.withdrawl + this.transaction.deposit;
+        this.mostRecentTransaction = res[0];
       }
     });
 

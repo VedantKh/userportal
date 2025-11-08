@@ -76,10 +76,36 @@
           <div class="box-title transaction">
             <i class="fa-solid fa-receipt"></i> Transactions
           </div>
-          <div class="box-info">$ {{ transaction.total }}.00</div>
+          <div class="box-info-count">{{ transaction.count }} Total</div>
+          <div
+            class="recent-transaction"
+            *ngIf="mostRecentTransaction; else noTransactions"
+          >
+            <div class="transaction-visual">
+              <i
+                class="fa-solid transaction-arrow"
+                [ngClass]="{
+                  'fa-arrow-down deposit-arrow':
+                    mostRecentTransaction.action === 'deposit',
+                  'fa-arrow-up withdraw-arrow':
+                    mostRecentTransaction.action === 'withdraw'
+                }"
+              >
+              </i>
+              <div class="transaction-details">
+                <div class="transaction-amount">
+                  ${{ mostRecentTransaction.amount }}.00
+                </div>
+                <div class="transaction-date">
+                  {{ mostRecentTransaction.date | date : "MMM d, y" }}
+                </div>
+              </div>
+            </div>
+          </div>
+          <ng-template #noTransactions>
+            <div class="no-transactions">No transactions yet</div>
+          </ng-template>
           <p class="text-center">
-            {{ transaction.count }} Transactions.
-            <br />
             <a class="btn btn-info" routerLink="/transactionHistory"
               >View Transactions</a
             >
