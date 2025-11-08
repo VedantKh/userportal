@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { TransferHistoryService } from './transfer-history.service';
+import { TransferhistoryService } from './transfer-history.service';
 
-describe('TransferHistoryService', () => {
-  let service: TransferHistoryService;
+describe('TransferhistoryService', () => {
+  let service: TransferhistoryService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(TransferHistoryService);
+    service = TestBed.inject(TransferhistoryService);
   });
 
   it('should be created', () => {
