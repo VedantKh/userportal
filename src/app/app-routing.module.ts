@@ -16,12 +16,17 @@ import { WithdrawComponent } from './withdraw/withdraw.component';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full',
+  },
+  {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
   },
   {
     path: 'register',
-    component: RegisterComponent
+    component: RegisterComponent,
   },
   {
     path: 'transfer',
@@ -51,7 +56,7 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
   },
   {
     path: 'transferHistory',
@@ -63,11 +68,11 @@ const routes: Routes = [
     component: EditProfileComponent,
     canActivate: [AuthGuard],
   },
-  { path: '**', redirectTo: '/login' },
+  { path: '**', redirectTo: '/home' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
