@@ -8,6 +8,8 @@ import { AuthService } from './auth.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  title = 'userPortal';
+  
   constructor(private router: Router, private authService: AuthService) {}
 
   ngOnInit(): void {

@@ -1,7 +1,7 @@
-import { Userdisplay } from './userdisplay';
+import { UserDisplay } from './models/userdisplay';
 
-describe('Userdisplay', () => {
+describe('UserDisplay', () => {
   it('should create an instance', () => {
-    expect(new Userdisplay()).toBeTruthy();
+    expect(new UserDisplay()).toBeTruthy();
   });
 });
