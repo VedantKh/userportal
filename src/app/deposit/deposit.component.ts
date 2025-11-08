@@ -14,13 +14,13 @@ export class DepositComponent implements OnInit {
     private formBuilder: FormBuilder,
     private router: Router,
     private depositService: DepositService
-  ) { }
+  ) {}
   depositForm: FormGroup;
   loading = false;
   submitted = false;
 
   ngOnInit(): void {
-    const accNo = +localStorage.getItem('savingAccNo');    
+    const accNo = +localStorage.getItem('savingAccNo');
     this.depositForm = this.formBuilder.group({
       account: accNo,
       amount: ['', [Validators.required]],
@@ -53,6 +53,8 @@ export class DepositComponent implements OnInit {
               icon: 'success',
               title: 'Transaction successful',
               text: data.responseMessage,
+            }).then(() => {
+              this.router.navigate(['/home']);
             });
           } else {
             Swal.fire({

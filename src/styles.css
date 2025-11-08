@@ -35,11 +35,13 @@ body {
 .btn-info {
   background-color: var(--bofa-blue);
   border-color: var(--bofa-blue);
+  color: #fff;
 }
 .btn-info:hover,
 .btn-info:focus {
   background-color: var(--bofa-blue-70);
   border-color: var(--bofa-blue-70);
+  color: #fff;
 }
 .btn-outline-primary {
   color: var(--bofa-blue);

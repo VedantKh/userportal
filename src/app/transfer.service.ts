@@ -1,14 +1,12 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
-
+import { of } from 'rxjs';
+import { MockBankDataService } from './mock-bank-data.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TransferService {
-
-  constructor(private http: HttpClient) { }
+  constructor(private store: MockBankDataService) {}
 
   insertEntry(
     username: string,
@@ -17,14 +15,16 @@ export class TransferService {
     primaryAccount: string,
     amount: number
   ) {
-    const body = {
-      username: username,
-      savingAccount: savingAccount,
-      ifsc: ifscNo,
-      primaryAccount: primaryAccount,
-      amount: amount,
-    };
-    console.log(body);
-    return this.http.post(environment.baseUrl + '/account/transfer', body);
+    const result = this.store.transfer(
+      username,
+      savingAccount,
+      ifscNo,
+      primaryAccount,
+      amount
+    );
+    return of({
+      transferStatus: result.success,
+      responseMessage: result.message,
+    });
   }
 }

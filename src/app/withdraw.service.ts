@@ -1,22 +1,18 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environment } from '../environments/environment'
-
+import { of } from 'rxjs';
+import { MockBankDataService } from './mock-bank-data.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class WithdrawService {
-  
-
-  constructor(private http: HttpClient) {}
+  constructor(private store: MockBankDataService) {}
 
   insertEntry(account: string, amount: number) {
-    const body = {
-      account: account,
-      amount: amount,
-    };
-    console.log(body);
-    return this.http.post(environment.baseUrl + '/account/withdraw', body);
+    const result = this.store.withdraw(account, amount);
+    return of({
+      withdrawStatus: result.success,
+      responseMessage: result.message,
+    });
   }
 }
