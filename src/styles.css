@@ -1,13 +1,81 @@
-@import 'ag-grid-community/dist/styles/ag-grid.css';
-@import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
-
+@import "ag-grid-community/dist/styles/ag-grid.css";
+@import "ag-grid-community/dist/styles/ag-theme-alpine.css";
 
 body {
-    font-family: "Open Sans", sans-serif;
+  font-family: -apple-system, Segoe UI, "Helvetica Neue", Arial, sans-serif;
+  color: #111;
 }
 
 .nav-border {
-    border-bottom: 2px solid #21d192;
-    background: #fff;
+  border-bottom: 2px solid var(--bofa-blue);
+  background: #fff;
 }
 
+/* Bank of America theme tokens */
+:root {
+  --bofa-blue: #002f6c;
+  --bofa-red: #e31837;
+  --bofa-blue-70: #0b3c84;
+  --bofa-gray-100: #f5f6f7;
+  --bofa-gray-300: #dadde1;
+  --bofa-gray-700: #4a4f55;
+  --bofa-black: #111111;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--bofa-red);
+  border-color: var(--bofa-red);
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #c91530;
+  border-color: #c91530;
+}
+.btn-info {
+  background-color: var(--bofa-blue);
+  border-color: var(--bofa-blue);
+}
+.btn-info:hover,
+.btn-info:focus {
+  background-color: var(--bofa-blue-70);
+  border-color: var(--bofa-blue-70);
+}
+.btn-outline-primary {
+  color: var(--bofa-blue);
+  border-color: var(--bofa-blue);
+}
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  color: #fff;
+  background-color: var(--bofa-blue);
+  border-color: var(--bofa-blue);
+}
+
+/* Cards */
+.card {
+  border-radius: 8px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Forms */
+.form-control:focus {
+  border-color: var(--bofa-blue);
+  box-shadow: 0 0 0 0.2rem rgba(0, 47, 108, 0.15);
+}
+
+/* Navbar links active state */
+.navbar .nav-link.active,
+.navbar .nav-link:focus {
+  position: relative;
+}
+.navbar .nav-link.active::after,
+.navbar .nav-link:focus::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  height: 2px;
+  background-color: var(--bofa-red);
+}

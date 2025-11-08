@@ -5,7 +5,7 @@ import { AuthService } from '../auth.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
   isLoggedIn: Observable<boolean>;
@@ -13,28 +13,34 @@ export class HeaderComponent implements OnInit {
   user: Observable<string>;
   isShow = false;
   isMobileNav = false;
-  constructor(public authService: AuthService) { }
+  isMainMenuOpen = false;
+  constructor(public authService: AuthService) {}
 
   ngOnInit(): void {
     this.isLoggedIn = this.authService.isLoggedIn;
     this.user = this.authService.userName;
     this.isRegsiter = this.authService.isRegisterPage;
-
   }
 
   toggleMenu() {
     this.isShow = !this.isShow;
   }
 
-  toggleNav(){
+  toggleNav() {
     this.isMobileNav = !this.isMobileNav;
+  }
+
+  toggleMainMenu() {
+    this.isMainMenuOpen = !this.isMainMenuOpen;
+  }
+
+  closeMainMenu() {
+    this.isMainMenuOpen = false;
   }
 
   logOut() {
     localStorage.setItem('login', 'false');
     this.isShow = !this.isShow;
     this.authService.authenticate(false);
-
   }
-
 }

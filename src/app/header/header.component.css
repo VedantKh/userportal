@@ -1,22 +1,27 @@
 nav.navbar {
-    margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .userName {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 .close-btn {
-    position: absolute;
-    height: 23px;
-    width: 23px;
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    right: 5px;
-    background: #181717;
-    border-radius: 50%;
-    padding-bottom: 2px;
-    text-align: center;
-    bottom: 5px;
+  position: absolute;
+  height: 23px;
+  width: 23px;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  right: 5px;
+  background: #181717;
+  border-radius: 50%;
+  padding-bottom: 2px;
+  text-align: center;
+  bottom: 5px;
+}
+
+/* Ensure logo image aligns nicely */
+.navbar-brand img {
+  display: block;
 }

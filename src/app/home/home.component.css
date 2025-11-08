@@ -35,14 +35,21 @@ body .infobox {
 
 .box-wrap {
   min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .box-wrap a {
   color: #fff;
 }
 
+.box-wrap p {
+  margin-bottom: 0.5rem;
+}
+
 .laptop-bg {
-  background-image: url('../../assets/man-with-laptop-light.png');
+  background-image: url("../../assets/man-with-laptop-light.png");
   background-position: bottom right;
   background-repeat: no-repeat;
   background-size: contain;
@@ -51,7 +58,7 @@ body .infobox {
 .box-title {
   font-size: 1.2em;
   color: #333;
-  padding: 10px 10px;
+  padding: 15px 10px 10px 10px;
   text-align: center;
   font-weight: bold;
 }
@@ -61,28 +68,59 @@ body .infobox {
   color: #000;
   padding: 15px 10px;
   text-align: center;
-  margin: 10px 0px;
+  margin: 15px 0px;
   border: 1px dashed #ccc;
   border-left: none;
   border-right: none;
 }
 
 .transfer {
-  color: #f39c12;
+  color: var(--bofa-blue);
 }
 
 .withdrawl {
-  color: #e74c3c;
+  color: var(--bofa-blue);
 }
 
 .deposit {
-  color: #0dcaf0;
+  color: var(--bofa-blue);
 }
 
 .balance {
-  color: #696cff;
+  color: var(--bofa-blue);
 }
 
 .transaction {
-  color: #2c3e50;
+  color: var(--bofa-blue);
+}
+
+/* Hero section spacing adjustments */
+.hero {
+  min-height: 220px;
+  padding: 1.5rem 2rem;
+  background-position: center right 1rem;
+}
+.hero h3 {
+  font-size: 2rem;
+  margin-bottom: 2.75rem;
+}
+.hero p {
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 992px) {
+  .hero {
+    padding: 2rem 2.5rem;
+  }
+}
+
+/* Hide hero background image on small screens */
+@media (max-width: 767.98px) {
+  .laptop-bg {
+    background-image: none;
+  }
+  .hero {
+    min-height: auto;
+    padding: 1rem;
+  }
 }

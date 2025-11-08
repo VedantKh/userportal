@@ -1,5 +1,4 @@
-<footer class="app-footer" *ngIf="(isLoggedIn | async) ||(isRegsiter | async)">
-
+<footer class="app-footer" *ngIf="(isLoggedIn | async) || (isRegsiter | async)">
   <section class="footer-section-1">
     <div class="container">
       <!-- Grid row -->
@@ -8,14 +7,20 @@
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
           <!-- Content -->
           <h6 class="text-uppercase fw-bold">
-            <i class="fa-solid fa-building-columns"></i>
-            ICIN BANK
+            <img
+              src="assets/Bank-of-America-Emblem.png"
+              alt="Bank of America emblem"
+              height="22"
+            />
+            Bank of America
           </h6>
-          <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+          <hr
+            class="mb-4 mt-0 d-inline-block mx-auto"
+            style="width: 60px; background-color: #7c4dff; height: 2px"
+          />
           <p>
-            ICIN Bank offers different type of accounts to meet your financial goals and secure your future.
-            Choose from our wide range of deposit products that are specifically designed to keep your unique
-            requirements in mind.
+            Bank of America provides banking, credit card, and financial
+            solutions to help make your financial life better.
           </p>
         </div>
         <!-- Grid column -->
@@ -24,18 +29,45 @@
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold">Products</h6>
-          <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+          <hr
+            class="mb-4 mt-0 d-inline-block mx-auto"
+            style="width: 60px; background-color: #7c4dff; height: 2px"
+          />
           <p>
-            <a href="#!" class="text-dark">Money Transfer</a>
+            <a
+              href="https://www.bankofamerica.com/online-banking/"
+              target="_blank"
+              rel="noopener"
+              class="text-dark"
+              >Online & Mobile Banking</a
+            >
           </p>
           <p>
-            <a href="#!" class="text-dark">Home Laon</a>
+            <a
+              href="https://www.bankofamerica.com/mortgage/"
+              target="_blank"
+              rel="noopener"
+              class="text-dark"
+              >Home Loans</a
+            >
           </p>
           <p>
-            <a href="#!" class="text-dark">Business Loan</a>
+            <a
+              href="https://www.bankofamerica.com/smallbusiness/"
+              target="_blank"
+              rel="noopener"
+              class="text-dark"
+              >Small Business</a
+            >
           </p>
           <p>
-            <a href="#!" class="text-dark">Foreign Exchange</a>
+            <a
+              href="https://www.bankofamerica.com/credit-cards/"
+              target="_blank"
+              rel="noopener"
+              class="text-dark"
+              >Credit Cards</a
+            >
           </p>
         </div>
         <!-- Grid column -->
@@ -44,18 +76,36 @@
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold">Quick links</h6>
-          <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+          <hr
+            class="mb-4 mt-0 d-inline-block mx-auto"
+            style="width: 60px; background-color: #7c4dff; height: 2px"
+          />
           <p>
-            <a href="#!" class="text-dark">Open Account</a>
+            <a
+              href="https://www.bankofamerica.com/deposits/"
+              target="_blank"
+              rel="noopener"
+              class="text-dark"
+              >Open Account</a
+            >
           </p>
           <p>
-            <a href="#!" class="text-dark">Credit Cards</a>
+            <a
+              href="https://www.bankofamerica.com/deposits/cd-certificate-of-deposit/"
+              target="_blank"
+              rel="noopener"
+              class="text-dark"
+              >Certificates of Deposit</a
+            >
           </p>
           <p>
-            <a href="#!" class="text-dark">Fix Deposit</a>
-          </p>
-          <p>
-            <a href="#!" class="text-dark">Help</a>
+            <a
+              href="https://www.bankofamerica.com/customer-service/contact-us/"
+              target="_blank"
+              rel="noopener"
+              class="text-dark"
+              >Help</a
+            >
           </p>
         </div>
         <!-- Grid column -->
@@ -64,11 +114,20 @@
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold">Contact</h6>
-          <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
-          <p><i class="fas fa-home mr-3"></i> Andheri, MUMBAI- 400096</p>
-          <p><i class="fas fa-envelope mr-3"></i>info@icin.com</p>
-          <p><i class="fas fa-phone mr-3"></i> 022 234 567 88</p>
-          <p><i class="fas fa-print mr-3"></i> 022 234 567 89</p>
+          <hr
+            class="mb-4 mt-0 d-inline-block mx-auto"
+            style="width: 60px; background-color: #7c4dff; height: 2px"
+          />
+          <p>
+            <i class="fas fa-home mr-3"></i> 100 N Tryon St, Charlotte, NC 28255
+          </p>
+          <p><i class="fas fa-phone mr-3"></i> US: 800.432.1000</p>
+          <p>
+            <i class="fas fa-phone mr-3"></i> International: +1.315.724.4022
+          </p>
+          <p>
+            <i class="fas fa-credit-card mr-3"></i> Credit Cards: 800.732.9194
+          </p>
         </div>
         <!-- Grid column -->
       </div>
@@ -80,30 +139,50 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-4">
-          © 2022 Copyright:
-          <a class="text-dark" href="#">ICIN Bank</a>
+          © 2025 Demo:
+          <a
+            class="text-dark"
+            href="https://www.bankofamerica.com/"
+            target="_blank"
+            rel="noopener"
+            >Bank of America</a
+          >
         </div>
         <div class="col-lg-8">
           <div class="float-end">
             <span>Get connected with us on social networks: </span>
             <span>
-              <a href="" class="text-white me-4">
+              <a
+                href="https://www.facebook.com/BankofAmerica"
+                target="_blank"
+                rel="noopener"
+                class="text-white me-4"
+              >
                 <i class="fab fa-facebook-f"></i>
               </a>
-              <a href="" class="text-white me-4">
+              <a
+                href="https://twitter.com/BofA_Help"
+                target="_blank"
+                rel="noopener"
+                class="text-white me-4"
+              >
                 <i class="fab fa-twitter"></i>
               </a>
-              <a href="" class="text-white me-4">
-                <i class="fab fa-google"></i>
-              </a>
-              <a href="" class="text-white me-4">
+              <a
+                href="https://www.instagram.com/bankofamerica/"
+                target="_blank"
+                rel="noopener"
+                class="text-white me-4"
+              >
                 <i class="fab fa-instagram"></i>
               </a>
-              <a href="" class="text-white me-4">
+              <a
+                href="https://www.linkedin.com/company/bank-of-america/"
+                target="_blank"
+                rel="noopener"
+                class="text-white me-4"
+              >
                 <i class="fab fa-linkedin"></i>
-              </a>
-              <a href="" class="text-white me-4">
-                <i class="fab fa-github"></i>
               </a>
             </span>
           </div>
@@ -111,5 +190,4 @@
       </div>
     </div>
   </section>
-
 </footer>

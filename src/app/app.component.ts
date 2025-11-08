@@ -12,9 +12,11 @@ export class AppComponent {
 
   ngOnInit(): void {
     // Demo: pre-authenticate and set default user, then go to home
-    const defaultUsername = 'vedantkhanna';
+    const defaultUsername = 'Vedant';
     localStorage.setItem('login', 'true');
     localStorage.setItem('username', defaultUsername);
+    // Ensure a default savings account number is present for demo services
+    localStorage.setItem('savingAccNo', '123456789012');
     this.authService.setUserName(defaultUsername);
     this.authService.authenticate(true);
     this.router.navigate(['/home']);

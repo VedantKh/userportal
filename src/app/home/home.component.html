@@ -1,17 +1,16 @@
-<div class="container">
+<div class="container mt-4">
   <div class="row">
     <div class="col-lg-9">
       <div class="card">
-        <div class="card-body box-wrap laptop-bg">
-          <h3>Welcome to ICIN Bank {{username}} !</h3>
+        <div class="card-body box-wrap laptop-bg hero">
+          <h3>Welcome to Bank of America {{ username }}!</h3>
           <p>
-            We offer you actions like Transfer of money, Checkbook request, Deposit,
-            Withdraw.
+            You can transfer, deposit and withdraw money between your accounts.
           </p>
           <br />
-          <p> This is your Saving <span class="fw-bold">A/C NO: {{ savingAcc }} </span> </p>
           <p>
-            <a class="btn btn-info" href="/deposit"><i class="fa-solid fa-dollar"></i> Deposit Money</a>
+            Your Savings Account Number is
+            <span class="fw-bold">{{ savingAcc }} </span>
           </p>
         </div>
       </div>
@@ -19,11 +18,11 @@
     <div class="col-lg-3">
       <div class="card">
         <div class="card-body box-wrap">
-          <div class="box-title balance"><i class="fa-solid fa-hand-holding-dollar"></i> Saving Balance</div>
-          <div class="box-info"> ₹ {{ savingBalanceLocal }}.00</div>
-          <p class="text-center">
-           This your saving account balace, Deposit money to increase Savings!
-          </p>
+          <div class="box-title balance">
+            <i class="fa-solid fa-hand-holding-dollar"></i> Savings Balance
+          </div>
+          <div class="box-info">$ {{ savingBalanceLocal }}.00</div>
+          <p class="text-center">This is your savings account balance.</p>
         </div>
       </div>
     </div>
@@ -32,11 +31,13 @@
     <div class="col-lg-3">
       <div class="card">
         <div class="card-body box-wrap">
-          <div class="box-title transfer"><i class="fa-solid fa-money-bill-transfer"></i> Total Transfer</div>
-          <div class="box-info"> ₹ {{ transfer }}.00</div>
+          <div class="box-title transfer">
+            <i class="fa-solid fa-money-bill-transfer"></i> Transfers
+          </div>
+          <div class="box-info">$ {{ transfer }}.00</div>
           <p class="text-center">
-            <br/>
-            <a class="btn btn-warning" href="/transfer">Transfer Money</a>
+            <br />
+            <a class="btn btn-info" routerLink="/transfer">Transfer Money</a>
           </p>
         </div>
       </div>
@@ -44,11 +45,13 @@
     <div class="col-lg-3">
       <div class="card">
         <div class="card-body box-wrap">
-          <div class="box-title withdrawl"><i class="fa-solid fa-magnifying-glass-dollar"></i> Total Withdrawl</div>
-          <div class="box-info"> ₹ {{ transaction.withdrawl }}.00</div>
+          <div class="box-title transfer">
+            <i class="fa-solid fa-arrow-down"></i> Withdrawals
+          </div>
+          <div class="box-info">$ {{ transaction.withdrawl }}.00</div>
           <p class="text-center">
-            <br/>
-            <a class="btn btn-danger" href="/withdraw">Withdraw Money</a>
+            <br />
+            <a class="btn btn-info" routerLink="/withdraw">Withdraw Money</a>
           </p>
         </div>
       </div>
@@ -56,11 +59,13 @@
     <div class="col-lg-3">
       <div class="card">
         <div class="card-body box-wrap">
-          <div class="box-title deposit"><i class="fa-solid fa-sack-dollar"></i> Total Deposit </div>
-          <div class="box-info"> ₹ {{ transaction.deposit }}.00</div>
+          <div class="box-title deposit">
+            <i class="fa-solid fa-sack-dollar"></i> Deposits
+          </div>
+          <div class="box-info">$ {{ transaction.deposit }}.00</div>
           <p class="text-center">
-            <br/>
-            <a class="btn btn-info" href="/deposit">Deposit Money</a>
+            <br />
+            <a class="btn btn-info" routerLink="/deposit">Deposit Money</a>
           </p>
         </div>
       </div>
@@ -68,11 +73,16 @@
     <div class="col-lg-3">
       <div class="card">
         <div class="card-body box-wrap">
-          <div class="box-title transaction"><i class="fa-solid fa-receipt"></i> Total Transaction</div>
-          <div class="box-info"> ₹ {{transaction.total}}.00</div>
-          
-          <p class="text-center" style="font-size: 1.5em;">
-            {{transaction.count}} Transcations.
+          <div class="box-title transaction">
+            <i class="fa-solid fa-receipt"></i> Transactions
+          </div>
+          <div class="box-info">$ {{ transaction.total }}.00</div>
+          <p class="text-center">
+            {{ transaction.count }} Transactions.
+            <br />
+            <a class="btn btn-info" routerLink="/transactionHistory"
+              >View Transactions</a
+            >
           </p>
         </div>
       </div>
