@@ -21,6 +21,8 @@ export class HomeComponent implements OnInit {
   primaryBalanceLocal: number;
   transaction: any = {
     count: 0,
+    deposit: 0,
+    withdrawl: 0,
   };
   mostRecentTransaction: Transaction | null = null;
   transfer = 0;
@@ -46,6 +48,13 @@ export class HomeComponent implements OnInit {
       if (res && res.length > 0) {
         this.transaction.count = res.length;
         this.mostRecentTransaction = res[0];
+        res.forEach((item) => {
+          if (item.action == 'deposit') {
+            this.transaction.deposit += item.amount;
+          } else {
+            this.transaction.withdrawl += item.amount;
+          }
+        });
       }
     });
 
