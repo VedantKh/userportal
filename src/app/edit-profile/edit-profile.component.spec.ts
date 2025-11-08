@@ -1,4 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { EditProfileComponent } from './edit-profile.component';
 
@@ -8,7 +11,8 @@ describe('EditProfileComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EditProfileComponent ]
+      declarations: [ EditProfileComponent ],
+      imports: [ ReactiveFormsModule, HttpClientTestingModule, RouterTestingModule ]
     })
     .compileComponents();
   });
