@@ -1,5 +1,7 @@
 # UserPortal
 
+[![CI](https://github.com/VedantKh/userportal/actions/workflows/ci.yml/badge.svg)](https://github.com/VedantKh/userportal/actions/workflows/ci.yml)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.3.
 
 ## Development server
