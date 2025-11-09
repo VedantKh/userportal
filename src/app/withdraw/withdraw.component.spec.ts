@@ -11,10 +11,13 @@ describe('WithdrawComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WithdrawComponent ],
-      imports: [ ReactiveFormsModule, HttpClientTestingModule, RouterTestingModule ]
-    })
-    .compileComponents();
+      declarations: [WithdrawComponent],
+      imports: [
+        ReactiveFormsModule,
+        HttpClientTestingModule,
+        RouterTestingModule,
+      ],
+    }).compileComponents();
   });
 
   beforeEach(() => {

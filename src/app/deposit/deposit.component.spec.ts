@@ -11,10 +11,13 @@ describe('DepositComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DepositComponent ],
-      imports: [ ReactiveFormsModule, HttpClientTestingModule, RouterTestingModule ]
-    })
-    .compileComponents();
+      declarations: [DepositComponent],
+      imports: [
+        ReactiveFormsModule,
+        HttpClientTestingModule,
+        RouterTestingModule,
+      ],
+    }).compileComponents();
   });
 
   beforeEach(() => {

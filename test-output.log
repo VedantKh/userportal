@@ -1,0 +1,238 @@
+
+> user-portal@0.0.0 test
+> ng test --watch=false --browsers=ChromeHeadlessCI
+
+Node.js version v23.5.0 detected.
+Odd numbered Node.js versions will not enter LTS status and should not be used for production. For more information, please see https://nodejs.org/en/about/releases/.
+- Generating browser application bundles (phase: setup)...
+✔ Browser application bundle generation complete.
+08 11 2025 18:26:59.037:INFO [karma-server]: Karma v6.3.20 server started at http://localhost:9876/
+08 11 2025 18:26:59.038:INFO [launcher]: Launching browsers ChromeHeadlessCI with concurrency unlimited
+08 11 2025 18:26:59.044:INFO [launcher]: Starting browser ChromeHeadless
+08 11 2025 18:26:59.401:ERROR [launcher]: Cannot start ChromeHeadless
+	[1108/182659.163440:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.164224:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size com.googlecode.crashpad.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.164791:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:66] setxattr org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.165570:ERROR:third_party/crashpad/crashpad/util/file/file_io.cc:103] ReadExactly: expected 8, observed 0
+[1108/182659.165870:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.165977:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size com.googlecode.crashpad.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.166085:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:66] setxattr org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.166802:ERROR:third_party/crashpad/crashpad/util/file/file_io.cc:103] ReadExactly: expected 8, observed 0
+[1108/182659.170960:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.171233:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size com.googlecode.crashpad.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.171328:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:66] setxattr org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+Received signal 6
+ [0x0001184446c0]
+ [0x000118448748]
+ [0x0001905796a4]
+ [0x00019053f88c]
+ [0x000190448a3c]
+ [0x00019738d9e4]
+ [0x00019738a6e8]
+ [0x000195302304]
+ [0x000195302f80]
+ [0x000195301fe0]
+ [0x0001953054ac]
+ [0x00019451ae80]
+ [0x000194518d10]
+ [0x000194518844]
+ [0x000113d64734]
+ [0x000114540eb8]
+ [0x000114540c70]
+ [0x000113a8e518]
+ [0x000112ecce14]
+ [0x0001115b6204]
+ [0x0001040c885c]
+ [0x00019019eb98]
+[end of stack trace]
+
+08 11 2025 18:26:59.402:ERROR [launcher]: ChromeHeadless stdout: 
+08 11 2025 18:26:59.402:ERROR [launcher]: ChromeHeadless stderr: [1108/182659.163440:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.164224:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size com.googlecode.crashpad.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.164791:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:66] setxattr org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.165570:ERROR:third_party/crashpad/crashpad/util/file/file_io.cc:103] ReadExactly: expected 8, observed 0
+[1108/182659.165870:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.165977:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size com.googlecode.crashpad.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.166085:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:66] setxattr org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.166802:ERROR:third_party/crashpad/crashpad/util/file/file_io.cc:103] ReadExactly: expected 8, observed 0
+[1108/182659.170960:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.171233:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size com.googlecode.crashpad.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.171328:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:66] setxattr org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+Received signal 6
+ [0x0001184446c0]
+ [0x000118448748]
+ [0x0001905796a4]
+ [0x00019053f88c]
+ [0x000190448a3c]
+ [0x00019738d9e4]
+ [0x00019738a6e8]
+ [0x000195302304]
+ [0x000195302f80]
+ [0x000195301fe0]
+ [0x0001953054ac]
+ [0x00019451ae80]
+ [0x000194518d10]
+ [0x000194518844]
+ [0x000113d64734]
+ [0x000114540eb8]
+ [0x000114540c70]
+ [0x000113a8e518]
+ [0x000112ecce14]
+ [0x0001115b6204]
+ [0x0001040c885c]
+ [0x00019019eb98]
+[end of stack trace]
+
+08 11 2025 18:26:59.403:INFO [launcher]: Trying to start ChromeHeadless again (1/2).
+08 11 2025 18:26:59.658:ERROR [launcher]: Cannot start ChromeHeadless
+	[1108/182659.448591:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.448890:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size com.googlecode.crashpad.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.449024:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:66] setxattr org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.449287:ERROR:third_party/crashpad/crashpad/util/file/file_io.cc:103] ReadExactly: expected 8, observed 0
+[1108/182659.449618:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.449740:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size com.googlecode.crashpad.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.449863:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:66] setxattr org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.450147:ERROR:third_party/crashpad/crashpad/util/file/file_io.cc:103] ReadExactly: expected 8, observed 0
+[1108/182659.450456:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.450563:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size com.googlecode.crashpad.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.450672:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:66] setxattr org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+Received signal 6
+ [0x0001143546c0]
+ [0x000114358748]
+ [0x0001905796a4]
+ [0x00019053f88c]
+ [0x000190448a3c]
+ [0x00019738d9e4]
+ [0x00019738a6e8]
+ [0x000195302304]
+ [0x000195302f80]
+ [0x000195301fe0]
+ [0x0001953054ac]
+ [0x00019451ae80]
+ [0x000194518d10]
+ [0x000194518844]
+ [0x00010fc74734]
+ [0x000110450eb8]
+ [0x000110450c70]
+ [0x00010f99e518]
+ [0x00010eddce14]
+ [0x00010d4c6204]
+ [0x0001000f485c]
+ [0x00019019eb98]
+[end of stack trace]
+
+08 11 2025 18:26:59.658:ERROR [launcher]: ChromeHeadless stdout: 
+08 11 2025 18:26:59.659:ERROR [launcher]: ChromeHeadless stderr: [1108/182659.448591:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.448890:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size com.googlecode.crashpad.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.449024:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:66] setxattr org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.449287:ERROR:third_party/crashpad/crashpad/util/file/file_io.cc:103] ReadExactly: expected 8, observed 0
+[1108/182659.449618:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.449740:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size com.googlecode.crashpad.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.449863:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:66] setxattr org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.450147:ERROR:third_party/crashpad/crashpad/util/file/file_io.cc:103] ReadExactly: expected 8, observed 0
+[1108/182659.450456:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.450563:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size com.googlecode.crashpad.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.450672:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:66] setxattr org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+Received signal 6
+ [0x0001143546c0]
+ [0x000114358748]
+ [0x0001905796a4]
+ [0x00019053f88c]
+ [0x000190448a3c]
+ [0x00019738d9e4]
+ [0x00019738a6e8]
+ [0x000195302304]
+ [0x000195302f80]
+ [0x000195301fe0]
+ [0x0001953054ac]
+ [0x00019451ae80]
+ [0x000194518d10]
+ [0x000194518844]
+ [0x00010fc74734]
+ [0x000110450eb8]
+ [0x000110450c70]
+ [0x00010f99e518]
+ [0x00010eddce14]
+ [0x00010d4c6204]
+ [0x0001000f485c]
+ [0x00019019eb98]
+[end of stack trace]
+
+08 11 2025 18:26:59.659:INFO [launcher]: Trying to start ChromeHeadless again (2/2).
+08 11 2025 18:26:59.908:ERROR [launcher]: Cannot start ChromeHeadless
+	[1108/182659.695274:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.695573:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size com.googlecode.crashpad.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.695701:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:66] setxattr org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.695943:ERROR:third_party/crashpad/crashpad/util/file/file_io.cc:103] ReadExactly: expected 8, observed 0
+[1108/182659.696232:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.696333:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size com.googlecode.crashpad.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.696437:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:66] setxattr org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.696695:ERROR:third_party/crashpad/crashpad/util/file/file_io.cc:103] ReadExactly: expected 8, observed 0
+[1108/182659.696954:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.697040:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size com.googlecode.crashpad.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.697138:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:66] setxattr org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+Received signal 6
+ [0x0001167646c0]
+ [0x000116768748]
+ [0x0001905796a4]
+ [0x00019053f88c]
+ [0x000190448a3c]
+ [0x00019738d9e4]
+ [0x00019738a6e8]
+ [0x000195302304]
+ [0x000195302f80]
+ [0x000195301fe0]
+ [0x0001953054ac]
+ [0x00019451ae80]
+ [0x000194518d10]
+ [0x000194518844]
+ [0x000112084734]
+ [0x000112860eb8]
+ [0x000112860c70]
+ [0x000111dae518]
+ [0x0001111ece14]
+ [0x00010f8d6204]
+ [0x00010245c85c]
+ [0x00019019eb98]
+[end of stack trace]
+
+08 11 2025 18:26:59.909:ERROR [launcher]: ChromeHeadless stdout: 
+08 11 2025 18:26:59.909:ERROR [launcher]: ChromeHeadless stderr: [1108/182659.695274:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.695573:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size com.googlecode.crashpad.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.695701:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:66] setxattr org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.695943:ERROR:third_party/crashpad/crashpad/util/file/file_io.cc:103] ReadExactly: expected 8, observed 0
+[1108/182659.696232:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.696333:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size com.googlecode.crashpad.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.696437:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:66] setxattr org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.696695:ERROR:third_party/crashpad/crashpad/util/file/file_io.cc:103] ReadExactly: expected 8, observed 0
+[1108/182659.696954:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.697040:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:41] getxattr size com.googlecode.crashpad.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+[1108/182659.697138:ERROR:third_party/crashpad/crashpad/util/mac/xattr.cc:66] setxattr org.chromium.crashpad.database.initialized on file /Users/vkhanna/Library/Application Support/Google/Chrome for Testing/Crashpad: Operation not permitted (1)
+Received signal 6
+ [0x0001167646c0]
+ [0x000116768748]
+ [0x0001905796a4]
+ [0x00019053f88c]
+ [0x000190448a3c]
+ [0x00019738d9e4]
+ [0x00019738a6e8]
+ [0x000195302304]
+ [0x000195302f80]
+ [0x000195301fe0]
+ [0x0001953054ac]
+ [0x00019451ae80]
+ [0x000194518d10]
+ [0x000194518844]
+ [0x000112084734]
+ [0x000112860eb8]
+ [0x000112860c70]
+ [0x000111dae518]
+ [0x0001111ece14]
+ [0x00010f8d6204]
+ [0x00010245c85c]
+ [0x00019019eb98]
+[end of stack trace]
+
+08 11 2025 18:26:59.909:ERROR [launcher]: ChromeHeadless failed 2 times (cannot start). Giving up.
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.

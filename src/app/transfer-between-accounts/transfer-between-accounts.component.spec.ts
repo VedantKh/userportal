@@ -11,10 +11,13 @@ describe('TransferBetweenAccountsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TransferBetweenAccountsComponent ],
-      imports: [ ReactiveFormsModule, HttpClientTestingModule, RouterTestingModule ]
-    })
-    .compileComponents();
+      declarations: [TransferBetweenAccountsComponent],
+      imports: [
+        ReactiveFormsModule,
+        HttpClientTestingModule,
+        RouterTestingModule,
+      ],
+    }).compileComponents();
   });
 
   beforeEach(() => {
