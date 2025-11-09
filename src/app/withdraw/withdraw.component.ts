@@ -39,6 +39,9 @@ export class WithdrawComponent implements OnInit {
     if (this.withdrawForm.invalid) {
       return;
     }
+    if (this.loading) {
+      return;
+    }
     this.loading = true;
     const result: any = Object.assign({}, this.withdrawForm.value);
 

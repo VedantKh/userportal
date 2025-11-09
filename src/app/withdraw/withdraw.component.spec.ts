@@ -57,7 +57,9 @@ describe('WithdrawComponent', () => {
       initialBalance = balance;
     }).unsubscribe();
     
-    const withdrawAmount = 100;
+    expect(initialBalance).toBe(13450); // Verify starting balance
+    
+    const withdrawAmount = 200;
     
     component.withdrawForm.patchValue({
       account: 123456789012,
@@ -70,7 +72,7 @@ describe('WithdrawComponent', () => {
 
     setTimeout(() => {
       mockBankDataService.savingBalance$.subscribe(newBalance => {
-        expect(newBalance).toBe(initialBalance - withdrawAmount);
+        expect(newBalance).toBe(13250); // 13450 - 200 = 13250
         expect(component.loading).toBe(false);
         done();
       }).unsubscribe();
@@ -83,7 +85,9 @@ describe('WithdrawComponent', () => {
       currentBalance = balance;
     }).unsubscribe();
     
-    const excessiveAmount = currentBalance + 1000;
+    expect(currentBalance).toBe(13450); // Verify starting balance
+    
+    const excessiveAmount = currentBalance + 1000; // 14450
     
     component.withdrawForm.patchValue({
       account: 123456789012,
@@ -94,7 +98,7 @@ describe('WithdrawComponent', () => {
 
     setTimeout(() => {
       mockBankDataService.savingBalance$.subscribe(balance => {
-        expect(balance).toBe(currentBalance);
+        expect(balance).toBe(13450); // Balance should remain unchanged
         expect(component.loading).toBe(false);
         done();
       }).unsubscribe();
