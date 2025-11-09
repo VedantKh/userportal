@@ -39,6 +39,9 @@ export class DepositComponent implements OnInit {
     if (this.depositForm.invalid) {
       return;
     }
+    if (this.loading) {
+      return;
+    }
     this.loading = true;
     const result: any = Object.assign({}, this.depositForm.value);
 

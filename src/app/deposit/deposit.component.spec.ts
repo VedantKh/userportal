@@ -57,6 +57,8 @@ describe('DepositComponent', () => {
       initialBalance = balance;
     }).unsubscribe();
     
+    expect(initialBalance).toBe(13450); // Verify starting balance
+    
     const depositAmount = 500;
     
     component.depositForm.patchValue({
@@ -70,7 +72,7 @@ describe('DepositComponent', () => {
 
     setTimeout(() => {
       mockBankDataService.savingBalance$.subscribe(newBalance => {
-        expect(newBalance).toBe(initialBalance + depositAmount);
+        expect(newBalance).toBe(13950); // 13450 + 500 = 13950
         expect(component.loading).toBe(false);
         done();
       }).unsubscribe();
