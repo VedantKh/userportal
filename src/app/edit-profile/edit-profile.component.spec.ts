@@ -11,10 +11,13 @@ describe('EditProfileComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EditProfileComponent ],
-      imports: [ ReactiveFormsModule, HttpClientTestingModule, RouterTestingModule ]
-    })
-    .compileComponents();
+      declarations: [EditProfileComponent],
+      imports: [
+        ReactiveFormsModule,
+        HttpClientTestingModule,
+        RouterTestingModule,
+      ],
+    }).compileComponents();
   });
 
   beforeEach(() => {
