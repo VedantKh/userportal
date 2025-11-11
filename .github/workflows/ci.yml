@@ -11,7 +11,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node: [16.x]  # Angular 13 supports Node 14/16; 16.x is recommended
+        node: [20.x]  # Angular 17 requires Node 18.13+; 20.x LTS is recommended
     steps:
       - name: Checkout
         uses: actions/checkout@v4
