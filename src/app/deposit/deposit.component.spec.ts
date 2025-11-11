@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Router } from '@angular/router';
 import { of } from 'rxjs';
@@ -8,6 +8,7 @@ import { of } from 'rxjs';
 import { DepositComponent } from './deposit.component';
 import { DepositService } from '../deposit.service';
 import { MockBankDataService } from '../mock-bank-data.service';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 describe('DepositComponent', () => {
   let component: DepositComponent;
@@ -18,14 +19,11 @@ describe('DepositComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [DepositComponent],
-      imports: [
-        ReactiveFormsModule,
-        HttpClientTestingModule,
-        RouterTestingModule,
-      ],
-      providers: [DepositService, MockBankDataService],
-    }).compileComponents();
+    declarations: [DepositComponent],
+    imports: [ReactiveFormsModule,
+        RouterTestingModule],
+    providers: [DepositService, MockBankDataService, provideHttpClient(withInterceptorsFromDi()), provideHttpClientTesting()]
+}).compileComponents();
   });
 
   beforeEach(() => {

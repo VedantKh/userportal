@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
 import { of } from 'rxjs';
@@ -11,6 +11,7 @@ import { TransactionService } from '../transaction.service';
 import { TransferhistoryService } from '../transfer-history.service';
 import { AuthService } from '../auth.service';
 import { MockBankDataService } from '../mock-bank-data.service';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 describe('HomeComponent - Comprehensive Tests with Dummy Data', () => {
   let component: HomeComponent;
@@ -23,16 +24,18 @@ describe('HomeComponent - Comprehensive Tests with Dummy Data', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HomeComponent ],
-      imports: [ RouterTestingModule, HttpClientTestingModule ],
-      providers: [
+    declarations: [HomeComponent],
+    imports: [RouterTestingModule],
+    providers: [
         UserService,
         TransactionService,
         TransferhistoryService,
         AuthService,
-        MockBankDataService
-      ]
-    })
+        MockBankDataService,
+        provideHttpClient(withInterceptorsFromDi()),
+        provideHttpClientTesting()
+    ]
+})
     .compileComponents();
   });
 

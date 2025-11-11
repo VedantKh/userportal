@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Router } from '@angular/router';
 import { of } from 'rxjs';
@@ -8,6 +8,7 @@ import { of } from 'rxjs';
 import { WithdrawComponent } from './withdraw.component';
 import { WithdrawService } from '../withdraw.service';
 import { MockBankDataService } from '../mock-bank-data.service';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 describe('WithdrawComponent', () => {
   let component: WithdrawComponent;
@@ -18,14 +19,11 @@ describe('WithdrawComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [WithdrawComponent],
-      imports: [
-        ReactiveFormsModule,
-        HttpClientTestingModule,
-        RouterTestingModule,
-      ],
-      providers: [WithdrawService, MockBankDataService],
-    }).compileComponents();
+    declarations: [WithdrawComponent],
+    imports: [ReactiveFormsModule,
+        RouterTestingModule],
+    providers: [WithdrawService, MockBankDataService, provideHttpClient(withInterceptorsFromDi()), provideHttpClientTesting()]
+}).compileComponents();
   });
 
   beforeEach(() => {
