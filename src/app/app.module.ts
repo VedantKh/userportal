@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'; 
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'; 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthService } from './auth.service';
 import { LoginService } from './login.service';
@@ -22,31 +22,24 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { AgGridModule } from 'ag-grid-angular';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent,
-    RegisterComponent,
-    HomeComponent,
-    ChequeBookRequestComponent,
-    TransactionHistoryComponent,
-    TransferBetweenAccountsComponent,
-    EditProfileComponent,
-    TransferHistoryComponent,
-    DepositComponent,
-    WithdrawComponent,
-    FooterComponent,
-    HeaderComponent  
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    AgGridModule 
-  ],
-  providers: [RegisterService, LoginService, AuthService],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        LoginComponent,
+        RegisterComponent,
+        HomeComponent,
+        ChequeBookRequestComponent,
+        TransactionHistoryComponent,
+        TransferBetweenAccountsComponent,
+        EditProfileComponent,
+        TransferHistoryComponent,
+        DepositComponent,
+        WithdrawComponent,
+        FooterComponent,
+        HeaderComponent
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        ReactiveFormsModule,
+        BrowserAnimationsModule,
+        AgGridModule], providers: [RegisterService, LoginService, AuthService, provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
